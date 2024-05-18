@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            background-color: lightblue;
+        }
+        div{
+            background-color: white;
+            margin-top: 50px;
+            border: 2px solid black;
+            max-width: 300px;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
+        }
+        fieldset {
+            padding: 20px;
+
+        }
+
+        fieldset input {
+            padding: 10px;
+        }
+        h1, p {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div>
+            <h1>Exemplo de Formulário</h1>
+            <form action="cadastro.php" method="get" autocomplete="on">
+                <p>
+                    <label for="icor">Cor: </label>
+                    <input type="color" name="cor" id="icor">
+                </p>
+                <p>
+                    <label for="inivel">Nível de Satisfação: </label>
+                    <input type="range" name="nivel" id="inivel">
+                </p>
+                <p> <!--Este tipo só funciona com metodo post -->
+                    <label for="ifoto">Foto do perfil:</label>
+                    <input type="file" name="foto" id="ifoto">
+                </p>
+                <p>
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpar">
+                </p>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
